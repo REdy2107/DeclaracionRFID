@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
+<!-- Primera Pestaña -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Quieres ser mi novia?</title>
+    <title>¿Estás segura?</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,18 +8,19 @@
             background-color: #f2e8e8;
             color: #333;
             padding: 20px;
-            position: relative;
-        }
-        h1 {
-            color: #e63946;
-            font-size: 3rem;
         }
         .heart {
             font-size: 5rem;
             color: #e63946;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #e63946;
+            font-size: 2rem;
+            margin-top: 20px;
         }
         .buttons {
-            margin-top: 20px;
+            margin-top: 30px;
         }
         button {
             font-size: 1.5rem;
@@ -39,53 +37,33 @@
         .no {
             background-color: #e63946;
             color: white;
-            position: absolute;
-        }
-        /* Estilos para la imagen */
-        .image-container {
-            margin-top: 20px;
-        }
-        .image-container img {
-            max-width: 300px;
-            border-radius: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
-    <!-- Reproductor de audio oculto con reproducción automática -->
-    <audio id="music" autoplay loop>
-        <source src="Star.mp3" type="audio/mpeg">
-        Tu navegador no soporta el audio.
-    </audio>
-
     <div class="heart">❤</div>
-    <h1>¿Quieres ser mi novia?</h1>
-    <p>Eres lo mejor que me ha pasado, y me encantaría caminar juntos por esta aventura llamada vida.</p>
+    <h1>Esta es mi segunda declaración, ¿estás segura de continuar?</h1>
 
     <div class="buttons">
-        <button class="yes" onclick="sayYes()">Sí</button>
-        <button class="no" onclick="moveNo()">No</button>
+        <button class="yes" onclick="startLove()">Sí</button>
+        <button class="no" onclick="sayNo()">No</button>
     </div>
 
     <p id="message" style="font-size: 1.5rem; margin-top: 20px;"></p>
 
-    <div class="image-container">
-        <img src="tu-imagen.jpg" alt="Nuestra foto">
-    </div>
+    <audio id="music" loop>
+        <source src="Star.mp3" type="audio/mpeg">
+        Tu navegador no soporta el audio.
+    </audio>
 
     <script>
-        function sayYes() {
-            document.getElementById("message").innerHTML = "¡Puedes besar al novio! 💋";
+        function startLove() {
+            document.getElementById("music").play();
+            window.open("segunda.html", "_blank");
         }
 
-        function moveNo() {
-            document.getElementById("message").innerHTML = "¿Estás segura? 😢";
-            let button = document.querySelector(".no");
-            let x = Math.random() * (window.innerWidth - 100);
-            let y = Math.random() * (window.innerHeight - 100);
-            button.style.left = `${x}px`;
-            button.style.top = `${y}px`;
+        function sayNo() {
+            document.getElementById("message").innerHTML = "Vuelve en otro momento. 😢";
         }
     </script>
 </body>
