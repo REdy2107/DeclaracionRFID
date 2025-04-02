@@ -11,6 +11,7 @@
             background-color: #f2e8e8;
             color: #333;
             padding: 20px;
+            position: relative;
         }
         h1 {
             color: #e63946;
@@ -40,6 +41,15 @@
             color: white;
             position: absolute;
         }
+        /* Estilos para la imagen */
+        .image-container {
+            margin-top: 20px;
+        }
+        .image-container img {
+            max-width: 300px; /* Ajusta el tamaño de la imagen */
+            border-radius: 20px; /* Bordes redondeados opcionales */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body>
@@ -53,6 +63,11 @@
     </div>
 
     <p id="message" style="font-size: 1.5rem; margin-top: 20px;"></p>
+
+    <!-- Contenedor de la imagen -->
+    <div class="image-container">
+        <img src="tu-imagen.jpg" alt="Nuestra foto">
+    </div>
 
     <script>
         function sayYes() {
