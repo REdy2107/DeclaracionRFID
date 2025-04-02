@@ -46,13 +46,19 @@
             margin-top: 20px;
         }
         .image-container img {
-            max-width: 300px; /* Ajusta el tamaño de la imagen */
-            border-radius: 20px; /* Bordes redondeados opcionales */
+            max-width: 300px;
+            border-radius: 20px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
+    <!-- Reproductor de audio oculto con reproducción automática -->
+    <audio id="music" autoplay loop>
+        <source src="Star.mp3" type="audio/mpeg">
+        Tu navegador no soporta el audio.
+    </audio>
+
     <div class="heart">❤</div>
     <h1>¿Quieres ser mi novia?</h1>
     <p>Eres lo mejor que me ha pasado, y me encantaría caminar juntos por esta aventura llamada vida.</p>
@@ -64,14 +70,13 @@
 
     <p id="message" style="font-size: 1.5rem; margin-top: 20px;"></p>
 
-    <!-- Contenedor de la imagen -->
     <div class="image-container">
         <img src="tu-imagen.jpg" alt="Nuestra foto">
     </div>
 
     <script>
         function sayYes() {
-            document.getElementById("message").innerHTML = "Sabia que dirías que si. ¡Puedes besar al novio! 😘 Te amo deberitas deberitas";
+            document.getElementById("message").innerHTML = "¡Puedes besar al novio! 💋";
         }
 
         function moveNo() {
